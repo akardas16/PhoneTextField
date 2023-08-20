@@ -31,17 +31,24 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    publishing {
-        singleVariant("release") {
-            withSourcesJar()
-        }
 
-    }
     buildFeatures {
         compose = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.4.3"
+    }
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "org.gradle.sample"
+            artifactId = "library"
+            version = "1.0.2"
+
+            //from(components["java"])
+        }
     }
 }
 
