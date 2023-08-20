@@ -32,14 +32,14 @@ implementation 'com.github.akardas16:PhoneTextField:1.5.0'
 * By default PhoneTextField will show device local country. The library will show different format phone masks for different countries.
 
 ```Kotlin
- var text by remember { mutableStateOf(TextFieldValue( text = "")) }
+ var textValue by remember { mutableStateOf(TextFieldValue( text = "")) }
 
- PhoneTextField(textValue = text, onTextValueChanged = {text = it}, showCode = false, showFlag = true)
+ PhoneTextField(textValue = textValue, onTextValueChanged = {text = it}, showCode = false, showFlag = true)
 ```
 * Use modifier to change PhoneTextField UI
   
 ```Kotlin
-PhoneTextField(textValue = text, onTextValueChanged = {text = it},
+PhoneTextField(textValue = textValue, onTextValueChanged = {text = it},
             showCode = false, showFlag = true, modifier = Modifier
                .height(52.dp)
                 .fillMaxSize(0.6f)
