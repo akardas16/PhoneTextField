@@ -2,7 +2,6 @@
 plugins {
     alias(libs.plugins.com.android.application)
     alias(libs.plugins.org.jetbrains.kotlin.android)
-    `maven-publish`
 
 
 }
@@ -24,12 +23,7 @@ android {
         }
     }
 
-    publishing {
-        singleVariant("release") {
-            withSourcesJar()
-        }
 
-    }
 
     buildTypes {
         release {

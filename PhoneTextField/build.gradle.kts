@@ -2,7 +2,6 @@
 plugins {
     alias(libs.plugins.com.android.library)
     alias(libs.plugins.org.jetbrains.kotlin.android)
-    `maven-publish`
 }
 
 android {
@@ -40,17 +39,7 @@ android {
     }
 }
 
-publishing {
-    publications {
-        create<MavenPublication>("maven") {
-            groupId = "com.example.phonetextfield"
-            artifactId = "library"
-            version = "1.1.1"
 
-            //from(components["java"])
-        }
-    }
-}
 
 dependencies {
 
