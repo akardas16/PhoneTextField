@@ -43,9 +43,9 @@ android {
 publishing {
     publications {
         create<MavenPublication>("maven") {
-            groupId = "org.gradle.sample"
+            groupId = "com.example.phonetextfield"
             artifactId = "library"
-            version = "1.0.2"
+            version = "1.1.1"
 
             //from(components["java"])
         }
