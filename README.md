@@ -14,9 +14,10 @@
 * Jitpack
 
 ```Kotlin
+ // use maven(url = {uri("https://jitpack.io")}) for build.gradle.kts
  allprojects {
    repositories {
-        maven { url 'https://jitpack.io' } // if you are using build.gradle.kts use maven(url = {uri("https://jitpack.io")})
+        maven { url 'https://jitpack.io' } 
     }
  }
 ```
