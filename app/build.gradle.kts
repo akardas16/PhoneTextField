@@ -2,6 +2,9 @@
 plugins {
     alias(libs.plugins.com.android.application)
     alias(libs.plugins.org.jetbrains.kotlin.android)
+    `maven-publish`
+
+
 }
 
 android {
@@ -19,6 +22,13 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+    }
+
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+        }
+
     }
 
     buildTypes {
@@ -48,6 +58,8 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+
+
 }
 
 dependencies {

@@ -2,6 +2,7 @@
 plugins {
     alias(libs.plugins.com.android.library)
     alias(libs.plugins.org.jetbrains.kotlin.android)
+    `maven-publish`
 }
 
 android {
@@ -30,7 +31,12 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+        }
 
+    }
     buildFeatures {
         compose = true
     }
