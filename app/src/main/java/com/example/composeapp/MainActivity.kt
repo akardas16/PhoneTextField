@@ -52,6 +52,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.composeapp.ui.theme.ComposeAppTheme
+import com.example.phonetextfield.PhoneTextField
 
 
 class MainActivity : ComponentActivity() {
@@ -88,7 +89,7 @@ fun Content(){
     Column(modifier = Modifier.fillMaxSize(), verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally) {
 
-        //PhoneTextField(textValue = text, onTextValueChanged = {text = it}, showCode = false, showFlag = true)
+        PhoneTextField(textValue = text, onTextValueChanged = {text = it}, showCode = false, showFlag = true)
 
 
 
